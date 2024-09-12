@@ -13,9 +13,9 @@ void afficheAgeSportifParAdresse (Sportif* sportif);
 int main(void)
 {
     // VARIABLES
-    Sportif sportif1( "Clemenceau", "Edouard", 2007);
-    SportifMenteur sportif2("Patrick Etcheverry", Sportif("Berho", "Andoni",2000));
-    SportifMenteur sportif3("Yann Carpentier", Sportif("Barlic", "François", 2010)); 
+    Sportif sportif1("Clemenceau", "Edouard", 2007);
+    SportifMenteur sportif2("Berho", "Andoni",2000, "Patrick Etcheverry");
+    SportifMenteur sportif3("Barlic", "François", 2010, "Yann Carpentier"); 
 
     // TRAITEMENTS
     cout << "Annee actuelle : " << Outils::anneeActuelle() << endl;

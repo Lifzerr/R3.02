@@ -18,7 +18,8 @@ class Sportif{
     public:
         // Constructeur - Destructeur
         Sportif(string nom="", string prenom="", short int anneeNaiss = 0);
-        ~Sportif();
+        // Sportif(const Sportif& orig);
+        // ~Sportif();
 
         // Encapsulation ~ getters & setters
         string getNom() const {return _nom;};
@@ -33,7 +34,7 @@ class Sportif{
         string toString() const; /* Afficher en chaine les infos du sportif */
 
         // Méthodes spécifiques
-        short int getAge() const; /* But : Retourne l'age du sportif si > 18ans */
+        virtual short int getAge(); /* But : Retourne l'age du sportif  */
 };
 
 
