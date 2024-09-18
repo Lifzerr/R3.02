@@ -28,7 +28,6 @@ int main(){
     
     // TRAITEMENTS
     ind3.setVoiture(&voit3);
-    voit3.setPilote(&ind3);
 
     cout << ind3.toStringAndLink() << endl; 
     cout << voit3.toStringAndLink() << endl << endl;
@@ -37,8 +36,15 @@ int main(){
     // ind2.setVoiture(&voit3);
     voit3.setPilote(&ind2);
 
-    // cout << ind2.toStringAndLink() << endl;
-    cout << voit3.toStringAndLink() << endl;
+    cout << ind2.toStringAndLink() << endl;
+    cout << voit3.toStringAndLink() << endl << endl;
+
+    // Détruire ind2 & vérifier si le lien est supprimé
+    ind2.~Individu();
+    voit3.~Voiture();
+    cout << ind2.toStringAndLink() << endl;
+    cout << voit3.toStringAndLink() << endl << endl;
+    
     
     return 0;
 }

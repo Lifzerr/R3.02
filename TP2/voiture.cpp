@@ -3,10 +3,16 @@
 #include <iostream>
 using namespace std;
 
+
+// CONSTRUCTEUR -- DESTRUCTEUR
 Voiture::Voiture(string marque, string plaque, Individu* pilote):
     _marque(marque),
     _plaque(plaque),
     _monPilote(pilote){
+}
+
+Voiture::~Voiture(){
+    supprimerLien(); // On supprime le lien avec le pilote
 }
 
 // METHODES SPECIFIQUES
@@ -20,6 +26,7 @@ void Voiture::setPilote(Individu* val){
     supprimerLien(); 
     // _monPilote = new Individu();
     _monPilote = val;
+    _monPilote->setVoiture(this);
 }
 
 

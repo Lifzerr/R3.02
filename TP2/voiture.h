@@ -15,8 +15,9 @@ class Voiture{
         Individu* _monPilote; // Pointeur vers l'individu qui conduit la voiture
         
     public:
-        //CONSTRUCTEUR
+        //CONSTRUCTEUR -- DESTRUCTEUR
         Voiture(string marque="", string plaque="", Individu* pilote=nullptr);
+        ~Voiture();
 
         // ENCAPSULATION
         void setMarque(string val) {_marque = val;};

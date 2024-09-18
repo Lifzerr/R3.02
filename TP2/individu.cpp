@@ -1,12 +1,17 @@
 #include "individu.h"
 #include "voiture.h"
 
-// CONSTRUCTEUR
+// CONSTRUCTEUR -- DESTRUCTEUR
 Individu::Individu(std::string pNom, std::string pPrenom, Voiture* pVoiture):
     _nom(pNom),
     _prenom(pPrenom),
     _maVoiture(pVoiture){
     }
+
+
+Individu::~Individu(){
+    supprimerLien(); // On supprime le lien avec la voiture
+}
 
 
 // ENCAPSULATION
@@ -37,6 +42,7 @@ void Individu::setVoiture(Voiture* pVoiture){
     supprimerLien(); // On supprime le lien précédent
     // _maVoiture = new Voiture();
     _maVoiture = pVoiture;
+    _maVoiture->MajMonPilote(this); // On met à jour le pilote de la voiture
 }
 
 
@@ -58,5 +64,5 @@ std::string Individu::toStringAndLink(){
 }
 
 void Individu::supprimerLien(){
-    delete _maVoiture;
+    _maVoiture = nullptr;
 }

@@ -15,8 +15,9 @@ class Individu{
         Voiture* _maVoiture; // Pointeur vers la voiture de l'individu
 
     public :
-        // CONSTRUCTEUR 
+        // CONSTRUCTEUR -- DESTRUCTEUR	 
         Individu(std::string nom="", std::string prenom="", Voiture* voiture=nullptr);
+        ~Individu(); 
 
         // ENCAPSULATION
         std::string getNom() const; 
