@@ -23,6 +23,9 @@ void Voiture::MajMonPilote(Individu* pIndividu){
 
 // ENCAPSULATION
 void Voiture::setPilote(Individu* val){
+    if(_monPilote != nullptr){
+        _monPilote->supprimerLien(); 
+    }
     supprimerLien(); 
     // _monPilote = new Individu();
     _monPilote = val;
