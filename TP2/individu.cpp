@@ -43,7 +43,6 @@ void Individu::setVoiture(Voiture* pVoiture){
         _maVoiture->supprimerLien(); 
     }
     supprimerLien(); 
-    // _maVoiture = new Voiture();
     _maVoiture = pVoiture;
     _maVoiture->MajMonPilote(this); // On met à jour le pilote de la voiture
 }

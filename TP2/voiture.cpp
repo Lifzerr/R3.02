@@ -26,8 +26,7 @@ void Voiture::setPilote(Individu* val){
     if(_monPilote != nullptr){
         _monPilote->supprimerLien(); 
     }
-    supprimerLien(); 
-    // _monPilote = new Individu();
+    supprimerLien();
     _monPilote = val;
     _monPilote->setVoiture(this);
 }

@@ -16,7 +16,6 @@
 
 int main(){
 
-    cout << "Bozo" << endl;
     // VARIABLES 
     // Voitures
     Voiture voit1("RenaultClio", "123AB64");
@@ -29,13 +28,13 @@ int main(){
     Individu ind3("Durand","Marcel");
     
     // TRAITEMENTS
+    // Lier ind3 & voit3
     ind3.setVoiture(&voit3);
 
     cout << ind3.toStringAndLink() << endl; 
     cout << voit3.toStringAndLink() << endl << endl;
     
     // Lier la voit3 avec ind2
-    // ind2.setVoiture(&voit3);
     voit3.setPilote(&ind2);
 
     cout << ind2.toStringAndLink() << endl;
@@ -47,7 +46,6 @@ int main(){
     voit3.~Voiture();
     cout << ind2.toStringAndLink() << endl;
     cout << voit3.toStringAndLink() << endl << endl;
-    
     
     return 0;
 }
