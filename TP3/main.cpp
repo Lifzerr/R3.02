@@ -11,7 +11,7 @@
 
 
 #include <list>
-#include <utility>
+#include <utility> // Pour list
 #include <string>
 #include <iostream>
 #include <iterator>
