@@ -39,12 +39,17 @@ void Individu::setPrenom(std::string pPrenom){
 }
 
 void Individu::setVoiture(Voiture* pVoiture){
-    if(_maVoiture != nullptr ){
-        _maVoiture->supprimerLien(); 
+     supprimerLien(); 
+
+    if (pVoiture != nullptr) {
+        cout << "Test 1" << endl;
+        pVoiture->supprimerLien (); 
+        cout << "Test 2" << endl;
+        _maVoiture->MajMonPilote(this);
+        cout << "Test 3" << endl;
+        MajMaVoiture(pVoiture);
+        cout << "Test 4" << endl;
     }
-    supprimerLien(); 
-    _maVoiture = pVoiture;
-    _maVoiture->MajMonPilote(this); // On met à jour le pilote de la voiture
 }
 
 
@@ -66,5 +71,8 @@ std::string Individu::toStringAndLink(){
 }
 
 void Individu::supprimerLien(){
-    _maVoiture = nullptr;
+    if(_maVoiture!= nullptr){
+        _maVoiture->MajMonPilote(nullptr);
+        _maVoiture = nullptr;
+    }
 }

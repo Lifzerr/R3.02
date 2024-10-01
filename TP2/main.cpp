@@ -30,6 +30,7 @@ int main(){
     // TRAITEMENTS
     // Lier ind3 & voit3
     ind3.setVoiture(&voit3);
+    cout << "Etape 1" << endl;
 
     cout << ind3.toStringAndLink() << endl; 
     cout << voit3.toStringAndLink() << endl << endl;
