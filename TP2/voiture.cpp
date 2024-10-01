@@ -23,6 +23,7 @@ void Voiture::MajMonPilote(Individu* pIndividu){
 
 // ENCAPSULATION
 void Voiture::setPilote(Individu* val){
+<<<<<<< HEAD
 supprimerLien();
 
     if(val != nullptr){
@@ -30,6 +31,15 @@ supprimerLien();
         _monPilote->MajMaVoiture(this);
         MajMonPilote(val);
     } 
+=======
+    if(_monPilote != nullptr){
+        _monPilote->supprimerLien();
+        supprimerLien();
+    }
+    // Recréer le lien
+    _monPilote = val;
+    _monPilote->MajMaVoiture(this);
+>>>>>>> 2b610300a388b5e7550d9eead1e7bffb1152b86e
 }
 
 
@@ -46,8 +56,14 @@ string Voiture::toStringAndLink() {
 }
 
 void Voiture::supprimerLien(){
+<<<<<<< HEAD
     if(_monPilote != nullptr){
         _monPilote = nullptr;
         _monPilote->MajMaVoiture(nullptr);
+=======
+    if(_monPilote != nullptr)
+    {
+        _monPilote = nullptr;
+>>>>>>> 2b610300a388b5e7550d9eead1e7bffb1152b86e
     }
 }
