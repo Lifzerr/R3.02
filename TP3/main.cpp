@@ -126,6 +126,8 @@ void leMap(){
         iterateurAnnuaire++;
     }
 
+    cout << endl << endl;
+
     // Placer l'itérateur sur l'élement de clé "Philippe"
     iterateurAnnuaire = unAnnuaire.find("Philippe");
 
